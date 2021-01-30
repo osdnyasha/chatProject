@@ -1,0 +1,83 @@
+body {
+    background-image: linear-gradient(
+        to top,
+        rgb(15, 15, 15),
+        rgb(23, 23, 23),
+        rgb(31, 31, 31),
+        rgb(39, 39, 39),
+        rgb(47, 47, 47),
+        rgb(55, 55, 55),
+        rgb(62, 62, 62),
+        rgb(70, 70, 70),
+        rgb(78, 78, 78),
+        rgb(86, 86, 86),
+        rgb(94, 94, 94),
+        rgb(102, 102, 102)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block--auth {
+    border-radius: 20px;
+    width: 100%;
+    max-width: 430px;
+    padding: 50px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.form-sign__title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.form-sign label {
+    display: block;
+}
+.form-sign label:not(:first-child) {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.form-sign input,
+.form-sign button {
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+    line-height: 1.5;
+    padding: 10px;
+}
+.form-sign input {
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+}
+.form-sign input:focus {
+    opacity: 0.8;
+}
+.form-sign button {
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+.form-sign button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.alert {
+    position: relative;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+.alert_error {
+    color: #54151b;
+    background-color: #ffdee1;
+    border-color: #ecbdc2;
+}

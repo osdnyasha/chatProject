@@ -11,6 +11,7 @@ requirejs.config({
         Comp: "components",
         Base: "components/Base",
         Page: "components/Page",
+        AuthPage: "components/AuthPage",
     },
 });
 
@@ -27,18 +28,38 @@ const factory = new AbstractFactory();
 /**
  * Подгружаем страницу нужную и монтируем ее в dom
  */
-requirejs(["Page/Page"], function (Page) {
+requirejs(["Page/Page", "AuthPage/AuthPage"], function (Page, AuthPage) {
     "use strict";
 
-    const page = factory.create(Page, {
-        title: "MyProjectName",
-        description: "start page",
-        content: "page content",
-        contentOptions: {
-            descr: "опции компонента, если контент класс",
-        },
-    });
+    function userIsAuthorizated() {
+        if (localStorage.getItem("isAutorizated")) {
+            showProflePage();
+        } else {
+            showAuthPage();
+        }
+    }
 
-    // монтируем ее в dom
-    page.mount(document.body);
+    function showProflePage() {
+        const page = factory.create(Page, {
+            title: "MyProjectName",
+            description: "start page",
+            content: "page content",
+            contentOptions: {
+                descr: "опции компонента, если контент класс",
+            },
+        });
+        initPage(page);
+    }
+
+    function showAuthPage() {
+        const page = factory.create(AuthPage, {});
+        initPage(page);
+    }
+
+    function initPage(page) {
+        // монтируем ее в dom
+        page.mount(document.body);
+    }
+
+    userIsAuthorizated();
 });
