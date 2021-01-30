@@ -1,0 +1,295 @@
+/* -------- START GLOBAL STYLES ---------------- */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Gilroy;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+body {
+	height: 100vh;
+	width: 100%;
+	background-color: #ccc;
+}
+
+/* -------- END GLOBAL STYLES ---------------- */
+
+
+.top-nav {
+	background-color: #272627;
+	height: 13vh;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid #707070;
+}
+
+.top-nav .logo h2 {
+	color: #5ABC91;
+	font-size: 32px;
+	font-weight: bold;
+	padding: 20px 30px 0;
+}
+
+
+.top-nav .nav , .top-nav .nav  ul{
+	display: flex;
+}
+
+.top-nav .nav  ul li{
+	list-style: none;
+	padding: 30px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.top-nav .nav .photo-profile {
+	height: 50px;
+	width: 50px;
+	margin: 15px 25px;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 1px solid white;
+	background-image: url("../img/profile/9.jpg");
+	-webkit-background-size: contain;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+.chatbox {
+	display: flex;
+}
+
+.list-friends {
+	background-color: #1D1C1D;
+	width: 20%;
+	height: 87vh;
+}
+
+.list-dialog {
+	background-color: #383638;
+	width: 25%;
+	height: 87vh;
+}
+
+.message-box {
+	background-color: #4c4c4c;
+	width: 55%;
+	height: 87vh;
+}
+
+.list-friends {
+	overflow: hidden;
+	position: relative;
+}
+
+.list-friends li, .list-dialog li{
+	list-style: none;
+}
+.list-friends .friend {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	margin: 20px 10px 10px 0;
+	position: relative;
+	border-bottom: 1px solid #707070;
+	padding-bottom: 20px;
+}
+
+.list-friends .friend .name-friend{
+	font-size: 15px;
+	color: white;
+	font-weight: normal;
+	padding: 10px;
+}
+
+.list-friends .friend .name-friend::after{
+	position: absolute;
+	display: block;
+/*	content: "Online";*/
+	font-size: 10px;
+}
+
+
+/* ----------------------- Profile photos ---------------------- */
+.friend1 {background-image: url("../img/profile/9.jpg");}
+.friend2 {background-image: url("../img/profile/4.jpg");}
+.friend3 {background-image: url("../img/profile/3.jpg");}
+.friend4 {background-image: url("../img/profile/1.jpg");}
+.friend5 {background-image: url("../img/profile/5.jpg");}
+/* ----------------------- Profile photos ----------------------- */
+
+
+/* ------------------------- Profile status -------------------- */
+.online::after {content: "Online";color: #37AF7B;}
+.busy::after{content: "Busy";color: #b2a70c;}
+.offline::after {content: "Offline";color: #af1a03;}
+
+/* ------------------------- Profile status -------------------- */
+
+.list-friends .friend .name-box{
+	position: relative;
+}
+.list-friends .friend  span {
+	position: absolute;
+	right: 5px;
+	top: 0;
+	font-size: 10px;
+	color: white;
+	font-weight: bold;
+
+}
+.list-friends .friend .photo-friend {
+	height: 40px;
+	width: 40px;
+	overflow: hidden;
+	margin: 0 0 0 10px;
+	border-radius: 50%;
+	border: 2px solid #37AF7B;
+	-webkit-background-size: contain;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+} 
+
+
+
+.add-friend {
+	position: absolute;
+	bottom: 0;
+	height: 80px;
+	background-color: #37AF7B;
+	width:20%;
+}
+
+.add-friend h2, .list-dialog .find-dialog h2 {
+	line-height: 80px;
+	text-align: center;
+	font-size: 15px;
+}
+
+
+.message-box {
+	position: relative;
+}
+
+.message-top {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 80px;
+	background-color: #37AF7B;
+}
+
+.opponent-profile {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.opponent-about {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.opponent-photo {
+	height: 70px;
+	width: 70px;
+	margin: 5px 20px;
+	border-radius: 50%;
+	-webkit-background-size: contain;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.opponent-name h2 {
+	color: white;
+	line-height: 80px;
+	font-size: 18px;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+
+}
+
+.opponent-view h2 {
+	line-height: 80px;
+	font-size: 14px;
+	color: white;
+	margin: 0 20px 0;
+	font-style: normal;
+	font-weight: normal;
+
+}
+
+/* ----------------------- Dialog window ---------------------- */
+
+.list-dialog {
+	position: relative;
+	overflow: hidden: ;
+}
+
+.list-dialog .find-dialog {
+	height: 80px;
+	border:1px solid #666;
+	width: 100%;
+}
+.list-dialog .dialog .photo-friend {
+	height: 40px;
+	width: 40px;
+	overflow: hidden;
+	margin: 10px 0 0 10px;
+	border-radius: 50%;
+	border: 2px solid #37AF7B;
+	-webkit-background-size: contain;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+} 
+
+.list-dialog .dialog {
+	display: flex;
+	position: relative;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	flex-wrap: wrap;
+}
+
+.list-dialog .active{
+	background-color: #4c4c4c;
+}
+
+.list-dialog .dialog .name-box{
+	padding: 10px;
+}
+.list-dialog .dialog .name-friend{
+	font-size: 17px;
+	color: white;
+	font-weight: normal;
+}
+
+.list-dialog .dialog .friend-msg {
+	width: 100%;
+	margin-left: 50px;
+	padding: 0 10px;
+	text-overflow: hidden;
+	margin-top: -15px;
+}
+
+.list-dialog .dialog .friend-msg p {
+	color: #37AF7B;
+	font-size: 14px;
+}
