@@ -45,7 +45,7 @@ define(["Base/Component", "css!Comp/AuthPage/style"], function (Component) {
 
         _formSubmit(e) {
             e.preventDefault();
-            localStorage.setItem("isAutorizated", true);
+            sessionStorage.setItem("isAutorizated", true);
             location.reload();
         }
     }

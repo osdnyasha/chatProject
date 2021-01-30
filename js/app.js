@@ -32,7 +32,7 @@ requirejs(["Page/Page", "AuthPage/AuthPage"], function (Page, AuthPage) {
     "use strict";
 
     function userIsAuthorizated() {
-        if (localStorage.getItem("isAutorizated")) {
+        if (sessionStorage.getItem("isAutorizated")) {
             showProflePage();
         } else {
             showAuthPage();
